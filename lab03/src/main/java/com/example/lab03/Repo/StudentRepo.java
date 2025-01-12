@@ -14,4 +14,6 @@ public interface StudentRepo extends MongoRepository<Student ,String>{
     @Query("SELECT s.department FROM Student s WHERE s.id = :studentId")
     String findDepartmentById(@Param("studentId") String studentId);
 
+    void deleteByYearOfEnrollment(int yearOfEnrollment);
+
 }
