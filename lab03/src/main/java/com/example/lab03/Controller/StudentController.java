@@ -32,6 +32,11 @@ public class StudentController {
          List<Student> students = studentService.getStudentsByYear(year);
          return ResponseEntity.ok(students);
      }
+
+     @GetMapping("/{id}/department")
+        public String getDepartmentByStudentId(@PathVariable String id) {
+           return studentService.findDepartmentById(id);
+} 
        
     
      @PostMapping("/save")
