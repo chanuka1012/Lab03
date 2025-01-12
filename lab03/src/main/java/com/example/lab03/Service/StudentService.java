@@ -33,13 +33,9 @@ public class StudentService {
         return studentRepo.save(student);
     }
 
-    public boolean deleteStudent(Student student){
-        try {
-            studentRepo.delete(student);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+    
+    public void deleteByYearOfEnrollment(int year) {
+        studentRepo.deleteByYearOfEnrollment(year);
     }
 
 
