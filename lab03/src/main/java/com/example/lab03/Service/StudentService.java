@@ -25,6 +25,10 @@ public class StudentService {
         return studentRepo.findByYearOfEnrollment(year);
     }
 
+    public String findDepartmentById(String id) {
+        return studentRepo.findDepartmentById(id);
+    }
+
     public Student updateStudent(Student student){
         return studentRepo.save(student);
     }
